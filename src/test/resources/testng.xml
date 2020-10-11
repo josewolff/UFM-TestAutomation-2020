@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestAutomation" data-provider-thread-count="15">
+
+    <test name="TestSuite">
+
+        <groups>
+            <run>
+                <include name="systemTesting"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="apiTesting.GetMethodsUsers"/>
+            <class name="apiTesting.PostMethodsUsers"/>
+            <class name="systemTesting.MyFistSeleniumTest"/>
+        </classes>
+    </test>
+
+</suite>
