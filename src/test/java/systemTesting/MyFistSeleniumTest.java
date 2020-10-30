@@ -15,10 +15,11 @@ public class MyFistSeleniumTest extends InitDriver {
     }
 
     @Test(groups = {"systemTesting"})
-    public void myfirstTest(){
+    public void myfirstTest() throws InterruptedException {
         System.out.println("hello");
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Components')]/parent::a"))).click();
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Buttons')]"))).click();
         System.out.println(driver.getCurrentUrl());
     }
 }
+//http://localhost:8080/register.html
