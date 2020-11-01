@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import systemTesting.InitDriver;
 import systemTesting.pom.pageObject.CreateAccountObject;
 import systemTesting.pom.pageObject.LoginObjects;
+import utils.GlobalVariables;
 
 public class CreateAccountPOM extends InitDriver {
 
@@ -17,7 +18,7 @@ public class CreateAccountPOM extends InitDriver {
 
     @BeforeClass(alwaysRun = true)
     public void initUrl(){
-        driver.get("http://localhost:8080/register.html");
+        driver.get(GlobalVariables.registerSeleniumHost);
         createAccountObject =  new CreateAccountObject(driver, wait);
         loginObjects =  new LoginObjects(driver, wait);
 

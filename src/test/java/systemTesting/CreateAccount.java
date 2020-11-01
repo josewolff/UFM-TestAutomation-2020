@@ -6,12 +6,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import utils.GlobalVariables;
 
 public class CreateAccount extends InitDriver {
 
     @BeforeClass(alwaysRun = true)
         public void initUrl(){
-            driver.get("http://localhost:8080/register.html");
+            driver.get(GlobalVariables.registerSeleniumHost);
 
         }
 

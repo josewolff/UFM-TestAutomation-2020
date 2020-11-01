@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import systemTesting.InitDriver;
 import systemTesting.pom.pageObjectRefactor.createAccount.CreateAccountActions;
 import systemTesting.pom.pageObjectRefactor.logIn.LoginActions;
+import utils.GlobalVariables;
 
 public class CreateAccountPOMRefactor extends InitDriver {
 
@@ -15,7 +16,7 @@ public class CreateAccountPOMRefactor extends InitDriver {
 
     @BeforeClass(alwaysRun = true)
     public void initUrl(){
-        driver.get("http://localhost:8080/register.html");
+        driver.get(GlobalVariables.registerSeleniumHost);
         createAccountActions =  new CreateAccountActions(driver, wait);
         loginActions =  new LoginActions(driver, wait);
 

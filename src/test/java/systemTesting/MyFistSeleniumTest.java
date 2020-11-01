@@ -5,12 +5,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import utils.GlobalVariables;
 
 public class MyFistSeleniumTest extends InitDriver {
 
     @BeforeClass(alwaysRun = true)
     public void initUrl(){
-        driver.get("http://localhost:8080/index.html");
+        driver.get(GlobalVariables.seleniumHost);
 
     }
 

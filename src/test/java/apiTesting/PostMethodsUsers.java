@@ -6,6 +6,7 @@ import io.restassured.response.Response;
 import org.json.JSONObject;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import utils.GlobalVariables;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -16,8 +17,7 @@ public class PostMethodsUsers {
 
     @Test(groups = {"all", "postMethod", "createNewUser"}, description = "createNewUser API", dataProvider = "getBodyContent")
     public void createNewUser(String bodyContent) {
-        String url = "http://localhost:5000/users/add";
-        Response response = RequestMaker.makePostRequest(url, bodyContent);
+        Response response = RequestMaker.makePostRequest(GlobalVariables.postMethodsApiHost, bodyContent);
         String resposeString = response.asString();
         JSONObject jsonResponse =  new JSONObject(resposeString);
         System.out.println(jsonResponse.toString(10));
