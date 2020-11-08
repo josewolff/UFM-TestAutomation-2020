@@ -26,7 +26,7 @@ public class CreateAccount extends InitDriver {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("exampleRepeatPassword"))).sendKeys("test");
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Register Account')]"))).click();
         try{
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),'login')]")));
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),'Login')]")));
             System.out.println(driver.getCurrentUrl());
         }catch(Exception e){
             Assert.fail("No se encontro el elemento de login");
@@ -34,4 +34,3 @@ public class CreateAccount extends InitDriver {
 
     }
 }
-//

@@ -23,7 +23,7 @@ public class InitDriver {
     private String geckoDriver = "";
     private String chromeDriver = "";
 
-
+    @Parameters("browser")
     @BeforeClass(alwaysRun = true)
     public void openDriver(@Optional("chrome") String browser) throws IOException {
         initDriver(browser);
@@ -66,7 +66,7 @@ public class InitDriver {
                 }
             }
 
-            wait = new WebDriverWait(driver, 15, 100);
+            wait = new WebDriverWait(driver, 15,100);
             return driver;
         } catch (Exception var5) {
             var5.printStackTrace();

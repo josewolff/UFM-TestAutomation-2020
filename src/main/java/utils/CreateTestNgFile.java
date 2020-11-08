@@ -16,9 +16,11 @@ public class CreateTestNgFile {
         String includeGroup = args[0];
         String apiHost = args[1];
         String seleniumHost = args[2];
-        context.put("includeGroup", includeGroup);
-        context.put("apiUrl", apiHost);
+        String browser = args[3];
+        context.put("includeGroup", includeGroup);//seleniu,api
+        context.put("apiHost", apiHost);
         context.put("seleniumHost", seleniumHost);
+        context.put("browser", browser);
         String testNgTemplatePath = System.getProperty("user.dir") + "/src/test/resources/template.xml";
         String testNgFile = renderTemplate(context, testNgTemplatePath);
         String testNGFileLocation = System.getProperty("user.dir") + "/src/test/resources/testng.xml";

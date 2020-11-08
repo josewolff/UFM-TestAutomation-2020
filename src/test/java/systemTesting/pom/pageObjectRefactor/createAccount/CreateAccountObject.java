@@ -23,8 +23,6 @@ public class CreateAccountObject {
     @FindBy(xpath = "//a[contains(text(),'Register Account')]")
     protected WebElement register;
 
-
-
 }
 
 

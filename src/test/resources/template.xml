@@ -4,7 +4,7 @@
     <parameter name="includeGroup" value="{{includeGroup}}"/>
     <parameter name="apiHost" value="{{apiHost}}"/>
     <parameter name="seleniumHost" value="{{seleniumHost}}"/>
-
+    <parameter name="browser" value="{{browser}}"/>
     <test name="Test Cases">
         <groups>
             <run>
